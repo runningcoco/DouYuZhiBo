@@ -8,8 +8,35 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+private let kTitleViewH : CGFloat = 40
 
+class HomeViewController: UIViewController {
+    
+    fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
+        let titleView = PageTitleView(frame: titleFrame, titles: ["推荐","游戏","娱乐","趣玩"])
+        titleView.delegate = self
+        return titleView
+    }()
+    
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
+        
+        // 内容的frame
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
+        
+        // 确定子控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self!)
+        return contentView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +48,16 @@ class HomeViewController: UIViewController {
 // MARK:  design UI
 extension HomeViewController {
     fileprivate func designUI() {
+        
+        // 不需要调整UIScrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
+        
         setupNavigationBar()
+        
+        view.addSubview(pageTitleView)
+        
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.purple
     }
     
     private func setupNavigationBar() {
@@ -37,5 +73,12 @@ extension HomeViewController {
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highlightImageName: "Image_scan_click", size: size)
 		
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
+    }
+}
+
+// MARK:  PageTitleViewDelegate
+extension HomeViewController : PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
     }
 }
