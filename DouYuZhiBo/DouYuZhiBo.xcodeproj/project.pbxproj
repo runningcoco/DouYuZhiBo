@@ -22,6 +22,14 @@
 		56BD0B981DA2DF45007B728E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0B971DA2DF45007B728E /* Common.swift */; };
 		56BD0B9A1DA2EF47007B728E /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0B991DA2EF47007B728E /* PageContentView.swift */; };
 		56BD0B9C1DA2F3E8007B728E /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0B9B1DA2F3E8007B728E /* UIColor-Extension.swift */; };
+		56BD0BAE1DA59097007B728E /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0BAD1DA59097007B728E /* RecommendViewController.swift */; };
+		56BD0BB11DA590F2007B728E /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0BAF1DA590F2007B728E /* CollectionHeaderView.swift */; };
+		56BD0BB21DA590F2007B728E /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BD0BB01DA590F2007B728E /* CollectionHeaderView.xib */; };
+		56BD0BB71DA59131007B728E /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0BB31DA59131007B728E /* CollectionNormalCell.swift */; };
+		56BD0BB81DA59131007B728E /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BD0BB41DA59131007B728E /* CollectionNormalCell.xib */; };
+		56BD0BB91DA59131007B728E /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0BB51DA59131007B728E /* CollectionPrettyCell.swift */; };
+		56BD0BBA1DA59131007B728E /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BD0BB61DA59131007B728E /* CollectionPrettyCell.xib */; };
+		56BD0BBC1DA59676007B728E /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD0BBB1DA59676007B728E /* NetworkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		56BD0B971DA2DF45007B728E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		56BD0B991DA2EF47007B728E /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		56BD0B9B1DA2F3E8007B728E /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		56BD0BAD1DA59097007B728E /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		56BD0BAF1DA590F2007B728E /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		56BD0BB01DA590F2007B728E /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		56BD0BB31DA59131007B728E /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		56BD0BB41DA59131007B728E /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		56BD0BB51DA59131007B728E /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		56BD0BB61DA59131007B728E /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		56BD0BBB1DA59676007B728E /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			children = (
 				562C5D0C1DA2685D00EF0950 /* DouYuZhiBo */,
 				562C5D0B1DA2685D00EF0950 /* Products */,
+				56BD0BBD1DA59A29007B728E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +162,7 @@
 			children = (
 				56BD0B921DA299A5007B728E /* Extension */,
 				56BD0B971DA2DF45007B728E /* Common.swift */,
+				56BD0BBB1DA59676007B728E /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 			children = (
 				56BD0B821DA286BE007B728E /* Home.storyboard */,
 				56BD0B901DA28F80007B728E /* HomeViewController.swift */,
+				56BD0BAD1DA59097007B728E /* RecommendViewController.swift */,
 			);
 			path = Cotroller;
 			sourceTree = "<group>";
@@ -168,6 +187,8 @@
 		56BD0B8C1DA28E45007B728E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56BD0BAF1DA590F2007B728E /* CollectionHeaderView.swift */,
+				56BD0BB01DA590F2007B728E /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +214,10 @@
 			children = (
 				56BD0B951DA2A2EC007B728E /* PageTitleView.swift */,
 				56BD0B991DA2EF47007B728E /* PageContentView.swift */,
+				56BD0BB31DA59131007B728E /* CollectionNormalCell.swift */,
+				56BD0BB41DA59131007B728E /* CollectionNormalCell.xib */,
+				56BD0BB51DA59131007B728E /* CollectionPrettyCell.swift */,
+				56BD0BB61DA59131007B728E /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +229,13 @@
 				56BD0B9B1DA2F3E8007B728E /* UIColor-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		56BD0BBD1DA59A29007B728E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +270,7 @@
 				TargetAttributes = {
 					562C5D091DA2685D00EF0950 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -266,10 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BD0B871DA287F1007B728E /* Profile.storyboard in Resources */,
+				56BD0BB21DA590F2007B728E /* CollectionHeaderView.xib in Resources */,
+				56BD0BB81DA59131007B728E /* CollectionNormalCell.xib in Resources */,
 				56BD0B7F1DA2804E007B728E /* Main.storyboard in Resources */,
 				562C5D181DA2685D00EF0950 /* LaunchScreen.storyboard in Resources */,
 				562C5D151DA2685D00EF0950 /* Assets.xcassets in Resources */,
 				56BD0B891DA2880B007B728E /* Follow.storyboard in Resources */,
+				56BD0BBA1DA59131007B728E /* CollectionPrettyCell.xib in Resources */,
 				56BD0B851DA287A8007B728E /* Live.storyboard in Resources */,
 				56BD0B831DA286BE007B728E /* Home.storyboard in Resources */,
 			);
@@ -283,12 +319,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				562C5D0E1DA2685D00EF0950 /* AppDelegate.swift in Sources */,
+				56BD0BB11DA590F2007B728E /* CollectionHeaderView.swift in Sources */,
 				56BD0B9C1DA2F3E8007B728E /* UIColor-Extension.swift in Sources */,
+				56BD0BAE1DA59097007B728E /* RecommendViewController.swift in Sources */,
 				56BD0B5D1DA27C39007B728E /* MainViewController.swift in Sources */,
 				56BD0B961DA2A2EC007B728E /* PageTitleView.swift in Sources */,
 				56BD0B9A1DA2EF47007B728E /* PageContentView.swift in Sources */,
 				56BD0B941DA29A1D007B728E /* UIBarbuttonItem-Extension.swift in Sources */,
 				56BD0B981DA2DF45007B728E /* Common.swift in Sources */,
+				56BD0BB91DA59131007B728E /* CollectionPrettyCell.swift in Sources */,
+				56BD0BB71DA59131007B728E /* CollectionNormalCell.swift in Sources */,
+				56BD0BBC1DA59676007B728E /* NetworkTools.swift in Sources */,
 				56BD0B911DA28F80007B728E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +369,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: echochief@126.com (TWV2D2ACH8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -347,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -377,7 +418,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: echochief@126.com (TWV2D2ACH8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -390,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -403,8 +444,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zz.DouYuZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,8 +463,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = DouYuZhiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zz.DouYuZhiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

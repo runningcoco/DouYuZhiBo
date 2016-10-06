@@ -21,15 +21,14 @@ extension UIBarButtonItem {
     
     
     // 遍历构造函数：1.convenience开头  2.必须明确的调用一个设计的构造函数(self)
-    convenience init(imageName : String, highlightImageName : String = "", size : CGSize = CGSize.zero) {
+    convenience init(imageName : String, highImageName : String = "", size : CGSize = CGSize.zero) {
         
             let btn = UIButton()
         
-            btn.setImage(UIImage.init(named: imageName), for: .normal)
-        
-            if highlightImageName != "" {
-                btn.setImage(UIImage.init(named: highlightImageName), for: .highlighted)
-            }
+            btn.setImage(UIImage(named: imageName), for: UIControlState())
+        if highImageName != "" {
+            btn.setImage(UIImage(named: highImageName), for: .highlighted)
+        }
         
             if size == CGSize.zero {
                 btn.sizeToFit()
