@@ -6,7 +6,7 @@
 //  Copyright © 2016年 echochief. All rights reserved.
 //
 
-/**
+
 import UIKit
 import Alamofire
 
@@ -34,4 +34,4 @@ class NetworkTools {
         }
     }
 }
-*/
+
