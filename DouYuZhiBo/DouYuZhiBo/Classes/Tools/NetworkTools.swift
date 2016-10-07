@@ -21,8 +21,10 @@ class NetworkTools {
         // 1.获取类型
         let methodU = type == .get ? HTTPMethod.get : HTTPMethod.post
         // 把GET/POST 转化成小写 get/post
+		let str = "//"
+
         let methodL = methodU.rawValue.lowercased()
-        let urlStr = URLString.appending(methodL)
+        let urlStr = URLString.appending(str).appending(methodL)
 		
         /*
         // 2.发送网络请求 JSONSerialization.ReadingOptions
