@@ -46,8 +46,11 @@ class RecommendViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
+        // 设置UI
         setupUI()
         
+        // 发送网络请求
+        loadData()
         
     }
 }
@@ -58,6 +61,18 @@ extension RecommendViewController {
         view.addSubview(collectionView)
     }
 }
+
+// MARK:- 发送网络请求
+extension RecommendViewController {
+    fileprivate func loadData() {
+        NetworkTools.requestData(.get, URLString: "http://httpbin.org/", para: ["name" : "why"]) { (result) in
+            
+            print(result)
+        }
+    }
+}
+
+
 
 // MARK:- UICollectionViewDataSource
 extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
