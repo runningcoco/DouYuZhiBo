@@ -65,6 +65,12 @@
                 <constraint firstAttribute="bottom" secondItem="7Hz-WT-MhB" secondAttribute="bottom" constant="10" id="xpA-KS-n7U"/>
             </constraints>
             <size key="customSize" width="358" height="138"/>
+            <connections>
+                <outlet property="iconImageView" destination="DeN-KN-dIB" id="nbj-qO-NHN"/>
+                <outlet property="nickNameLabel" destination="f4r-ud-FFD" id="7Ne-c0-K38"/>
+                <outlet property="onlineBtn" destination="pPA-7b-M0m" id="R5P-L6-pUH"/>
+                <outlet property="roomNameLabel" destination="TiZ-E2-aft" id="iLE-96-lQo"/>
+            </connections>
             <point key="canvasLocation" x="264" y="382"/>
         </collectionViewCell>
     </objects>

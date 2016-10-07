@@ -23,6 +23,8 @@ class AnchorGroup: NSObject {
 	
     var icon_name : String = "home_header_normal"
 	
+    var icon_url : String = ""
+    
     // 定义主播的模型对象数据
     lazy var anchors : [AnchorModel] = [AnchorModel]()
    
@@ -39,15 +41,4 @@ class AnchorGroup: NSObject {
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
-    /*
-    override func setValue(_ value: Any?, forKey key: String) {
-        if key == "room_list" {
-            if let dataArray = value as? [[String : NSObject]] {
-                for dict in dataArray {
-                    anchors.append(AnchorModel(dict: dict))
-                }
-            }
-        }
-    }
-    */
 }
