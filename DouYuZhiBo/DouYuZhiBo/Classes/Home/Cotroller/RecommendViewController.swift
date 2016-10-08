@@ -14,6 +14,8 @@ private let kNormalItemH : CGFloat = kItemW * 3 / 4
 private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+
 private let kHeaderViewID = "kHeaderViewID"
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -44,6 +46,13 @@ class RecommendViewController: UIViewController {
         return collectionView
     }()
     
+    fileprivate lazy var cycleView : RecommandCycleView = {[unowned self] in
+        let cycleView = RecommandCycleView.recommandCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
+		
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,7 +63,6 @@ class RecommendViewController: UIViewController {
         
         // 发送网络请求
         loadData()
-        
     }
 }
 
@@ -62,6 +70,12 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     fileprivate func setupUI() {
         view.addSubview(collectionView)
+        
+        // 将cycleView加入collectionView
+        collectionView.addSubview(cycleView)
+        
+        // 设置collectionView内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
